@@ -111,8 +111,8 @@ let errors = ref("");
 const router = useRouter();
 const authStore = useAuthStore();
 
-const email = ref("user@readylms.com");
-const password = ref("secret@123");
+const email = ref("");
+const password = ref("");
 const loginBtnText = ref("Sign in");
 
 // Function to handle login
