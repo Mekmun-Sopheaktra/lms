@@ -9,8 +9,8 @@
                     <img
                         :src="masterStore?.masterData?.footer"
                         class="mb-3"
-                        width="150px"
-                        height="30px"
+                        width="178px"
+                        height="68px"
                     />
                     <p class="small text-light col-xl-8">
                         {{ masterStore?.masterData?.footer_description }}
@@ -18,11 +18,11 @@
                     <ul class="list-unstyled">
                         <li class="mb-3">
                             <a
-                                href="tel:+8801963953998"
+                                href="tel:+85592000000"
                                 class="text-decoration-none"
                             >
                                 <i class="bi bi-telephone me-3"></i>
-                                +8801963953998
+                              +85592000000
                             </a>
                         </li>
                         <li class="mb-3">

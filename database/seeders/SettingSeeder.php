@@ -14,7 +14,7 @@ class SettingSeeder extends Seeder
     public function run(): void
     {
         SettingRepository::create([
-            'footer_text' => 'Developed by Razinsoft',
+            'footer_text' => 'Developed by ITE DEVELOPMENT',
             'currency_position' => 'Left',
         ]);
     }

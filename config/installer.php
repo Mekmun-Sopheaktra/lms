@@ -181,7 +181,7 @@ return [
             'rule' => 'required|string',
             'label' => 'Codecanyon Username',
             'type' => 'text',
-            'placeholder' => 'e.g: razinsoft'
+            'placeholder' => 'e.g: ITE Development'
         ],
         'purchase_code' => [
             'rule' => 'required|string',
