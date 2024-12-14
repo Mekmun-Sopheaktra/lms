@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             UserRepository::create([
                 'name' => 'Administrator',
                 'phone' => '01000000000',
-                'email' => 'admin@example.com',
+                'email' => 'admin@ite.com',
                 'is_active' => true,
                 'is_admin' => true,
                 'email_verified_at' => now(),
@@ -37,7 +37,7 @@ class UserSeeder extends Seeder
             UserRepository::create([
                 'name' => 'Administrator',
                 'phone' => '01000000000',
-                'email' => 'admin@readylms.com',
+                'email' => 'admin@ite.com',
                 'is_active' => true,
                 'is_admin' => true,
                 'email_verified_at' => now(),
@@ -49,7 +49,7 @@ class UserSeeder extends Seeder
             UserRepository::create([
                 'name' => 'Demo User',
                 'phone' => '01000000001',
-                'email' => 'user@readylms.com',
+                'email' => 'user@ite.com',
                 'is_active' => true,
                 'is_admin' => false,
                 'email_verified_at' => now(),

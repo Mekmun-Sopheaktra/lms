@@ -119,12 +119,12 @@
                                     isReactionIllustrationAnimated,
                             }"
                         />
-                        <img
-                            :src="'/assets/images/website/hero-illustration.png'"
-                            loading="lazy"
-                            class="w-100"
-                            alt="Hero Illustration"
-                        />
+                      <img
+                          :src="selectedHeroIllustration"
+                          loading="lazy"
+                          class="w-100"
+                          alt="Hero Illustration"
+                      />
                     </div>
                 </div>
             </div>
@@ -290,7 +290,7 @@
 
 <script setup>
 import { useRouter } from "vue-router";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 import { useMasterStore } from "@/stores/master";
 
 const searchInputQuery = ref("");
@@ -301,6 +301,18 @@ const isStudentSummaryAnimated = ref(true);
 const isInstructorSummaryAnimated = ref(true);
 const isCourseSummaryAnimated = ref(true);
 const isReactionIllustrationAnimated = ref(true);
+
+const heroIllustrations = [
+  "/assets/images/website/hero/sear.png",
+  "/assets/images/website/hero/vin.png",
+  // Add more paths as needed
+];
+const selectedHeroIllustration = ref(heroIllustrations[0]);
+
+onMounted(() => {
+  const randomIndex = Math.floor(Math.random() * heroIllustrations.length);
+  selectedHeroIllustration.value = heroIllustrations[randomIndex];
+});
 
 const performSearch = () => {
     if (searchInputQuery.value) {
