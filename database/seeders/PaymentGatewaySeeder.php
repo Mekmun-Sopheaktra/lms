@@ -45,6 +45,11 @@ class PaymentGatewaySeeder extends Seeder
                 'alias' => 'Razorpay',
                 'is_active' => true,
             ],
+            'khqr' => [
+                'title' => 'KHQR',
+                'name' => 'khqr',
+                'key' => 'rzp_live_C7ayx7PaJJkARf',
+            ],
 
         ];
 
@@ -54,7 +59,7 @@ class PaymentGatewaySeeder extends Seeder
             ],[
                 'config' => json_encode($config),
                 'type' => 'test',
-                'is_active' => true,
+                'is_active' => false,
             ]);
 
             switch ($name) {
@@ -106,6 +111,17 @@ class PaymentGatewaySeeder extends Seeder
                     $media = Media::factory()->create([
                         'type' => MediaTypeEnum::IMAGE,
                         'src' => 'assets/images/payment/Razorpay.png',
+                        'path' => 'assets/images/payment/',
+                        'extension' => 'png',
+                    ]);
+                    $paymentGateway->update([
+                        'media_id' => $media->id
+                    ]);
+                    break;
+                case 'khqr':
+                    $media = Media::factory()->create([
+                        'type' => MediaTypeEnum::IMAGE,
+                        'src' => 'assets/images/payment/khqr.png',
                         'path' => 'assets/images/payment/',
                         'extension' => 'png',
                     ]);

@@ -24,6 +24,8 @@ class PaymentService
                 return (new AamarPayment())->processPayment($amount, $data, $config);
             case 'razorpay':
                 return (new RazorPayment())->processPayment($amount, $data, $config);
+            case 'khqr':
+                return (new KHQRPayment())->processPayment($amount, $data, $config);
             default:
                 throw new \Exception("Unsupported payment gateway");
         }
@@ -41,6 +43,8 @@ class PaymentService
                 return view('payment.stripe.stripe');
             case 'aamarpay':
                 return view('payment.sslcommerz');
+            case 'khqr':
+                return view('payment.khqr');
             default:
                 throw new \Exception("Unsupported payment gateway");
         }

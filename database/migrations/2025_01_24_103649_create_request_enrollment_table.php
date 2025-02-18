@@ -11,11 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('request_enrollments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('logo_id')->nullable()->constrained('media')->nullOnDelete();
-            $table->foreignId('favicon_id')->nullable()->constrained('media')->nullOnDelete();
-            $table->string('admin_footer_text')->default('Developed by ITE Development');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('course_id');
+            $table->unsignedBigInteger('coupon_id')->nullable();
+            $table->decimal('course_price', 10, 2);
+            $table->decimal('discount_amount', 10, 2)->default(0);
             $table->timestamps();
         });
     }
@@ -25,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('settings');
+        Schema::dropIfExists('request_enrollments');
     }
 };

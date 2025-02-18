@@ -106,9 +106,15 @@ Route::middleware(['auth:web', 'adminauth'])->group(function () {
         });
 
         Route::controller(EnrollmentController::class)->prefix('enrollment')->group(function () {
+            Route::get('/create', 'create')->name('enrollment.create');
+             Route::post('/store', 'store')->name('enrollment.store');
             Route::get('/list', 'index')->name('enrollment.index');
             Route::get('/delete/{enrollment}', 'delete')->name('enrollment.destroy');
             Route::get('/restore/{id}', 'restore')->name('enrollment.restore');
+        });
+
+        Route::controller(EnrollmentController::class)->prefix('request')->group(function () {
+            Route::get('/enrollment', 'request')->name('enrollment.request.index');
         });
 
         Route::controller(ReviewController::class)->prefix('review')->group(function () {

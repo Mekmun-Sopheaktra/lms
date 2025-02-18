@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Repositories\CouponRepository;
 use App\Repositories\CourseRepository;
 use App\Repositories\EnrollmentRepository;
+use App\Repositories\RequestEnrollmentRepository;
 use App\Repositories\TransactionRepository;
 use App\Services\PaymentService;
 use Illuminate\Http\Request;

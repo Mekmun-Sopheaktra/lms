@@ -16,6 +16,7 @@ class PaymentGatewayController extends Controller
         $twoCheckout = PaymentGateway::query()->where('name', '2checkout')->first();
         $aamarpay = PaymentGateway::query()->where('name', 'aamarpay')->first();
         $razorpay = PaymentGateway::query()->where('name', 'razorpay')->first();
+        $khqr = PaymentGateway::query()->where('name', 'khqr')->first();
 
         return view('payment_gateway.index', [
             'paypal' => $paypal,
@@ -23,11 +24,13 @@ class PaymentGatewayController extends Controller
             'twoCheckout' => $twoCheckout,
             'aamarpay' => $aamarpay,
             'razorpay' => $razorpay,
+            'khqr' => $khqr,
             'paypalConfig' => json_decode($paypal->config),
             'stripeConfig' => json_decode($stripe->config),
             'twoCheckoutConfig' => json_decode($twoCheckout->config),
             'aamarpayConfig' => json_decode($aamarpay->config),
             'razorpayConfig' => json_decode($razorpay->config),
+            'khqrConfig' => json_decode($khqr->config),
         ]);
     }
 

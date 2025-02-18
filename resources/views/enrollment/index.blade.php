@@ -6,13 +6,14 @@
     <!-- ****Body-Section***** -->
     <div class="app-main-outer">
         <div class="app-main-inner">
-            <div class="page-title-actions px-3 d-flex">
+            <div class="page-title-actions px-3 mb-3 d-flex justify-content-between align-content-center">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Enrollment</li>
                     </ol>
                 </nav>
+                <a href="{{ route('enrollment.create') }}" class="btn btn-primary">Add Enrollment</a>
             </div>
             <div class="row" id="deleteTableItem">
                 <div class="col-md-12">

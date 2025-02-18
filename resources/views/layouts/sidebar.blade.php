@@ -106,10 +106,17 @@
                     </a>
                     <ul
                         class="mm-collapse {{ request()->is('admin/enrollment*') || request()->is('admin/review*') ? 'mm-show' : '' }}">
+
                         <li class="sub-menu {{ request()->is('admin/enrollment*') ? 'mm-active' : '' }}">
                             <a href="{{ route('enrollment.index') }}">
                                 <i class="fa-solid fa-cart-shopping"></i>
                                 Enrollment
+                            </a>
+                        </li>
+                        <li class="sub-menu {{ request()->is('admin/request/enrollment*') ? 'mm-active' : '' }}">
+                            <a href="{{ route('enrollment.request.index') }}">
+                                <i class="fa-solid fa-money-check"></i>
+                                Enroll Request
                             </a>
                         </li>
                         <li class="sub-menu {{ request()->is('admin/review*') ? 'mm-active' : '' }}">

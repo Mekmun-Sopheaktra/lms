@@ -12,6 +12,19 @@ class Enrollment extends Model
 {
     protected $guarded = ['id'];
 
+    //fillables
+    protected $fillable = [
+        'user_id',
+        'course_id',
+        'coupon_id',
+        'course_price',
+        'discount_amount',
+        'status',
+        'progress',
+        'last_activity',
+        'is_certificate_downloaded',
+    ];
+
     use HasFactory, SoftDeletes;
 
     public function user(): BelongsTo
